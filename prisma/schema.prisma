@@ -20,3 +20,17 @@ model User {
   email     String 
   phoneNo   String
 }
+
+model Match {
+  id        String   @id @default(uuid())
+  date      String
+  organiZerName      String
+  phoneNo   String
+}
+
+model Ground {
+  id        String   @id @default(uuid())
+  dateOfRegistration      String
+  organiZerName      String
+  phoneNo   String
+}

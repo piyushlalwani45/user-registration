@@ -11,7 +11,7 @@ const EditUserPage = ({ params }: { params: { id: string } }) => {
   const router = useRouter();
   const user = users?.find((u) => u.id === params.id);
   
-  const { form, reset, isDirty } = useForm<AddUserType>({
+  const { form, isDirty } = useForm<AddUserType>({
     onSubmit: async (values) => {
       try {
         await editUser.mutateAsync({ id: params.id, data: values });
