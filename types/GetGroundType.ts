@@ -1,4 +1,3 @@
-import { AddressType } from "./GetAddressType";
 
 export type GetGroundType = {
   id: string;
@@ -6,5 +5,8 @@ export type GetGroundType = {
   groundName: string;
   phoneNo: string;
   imageUrl: string;
-  address: AddressType;
+  addressLine : string;
+  pinCode : string;
+  city : string;
+  state : string
 };

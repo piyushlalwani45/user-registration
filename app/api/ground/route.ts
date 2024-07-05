@@ -9,12 +9,12 @@ export async function GET() {
 }
 
 export async function POST(req: Request) {
-  const { dateOfRegistration, groundName, phoneNo, imageUrl, addressLine } =
+  const { dateOfRegistration, groundName, phoneNo, imageUrl, addressLine, city, pinCode, state } =
     await req.json();
 
   try {
     const ground = await prisma.ground.create({
-      data: { dateOfRegistration, groundName, phoneNo, imageUrl, add },
+      data: { dateOfRegistration, groundName, phoneNo, imageUrl, addressLine, city, pinCode, state },
     });
     return NextResponse.json(ground, { status: 201 });
   } catch (error) {

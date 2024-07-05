@@ -5,5 +5,8 @@ export type AddGroundType = {
   groundName: string;
   phoneNo: string[];
   imageUrl: string[];
-  address: AddAddressType;
+  addressLine : string;
+  pinCode : string;
+  city : string;
+  state : string
 };

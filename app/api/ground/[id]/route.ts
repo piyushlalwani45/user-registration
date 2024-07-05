@@ -8,12 +8,12 @@ export async function PUT(
   { params }: { params: { id: string } }
 ) {
   const { id } = params;
-  const { dateOfRegistration, groundName, phoneNo, imageUrl, address } =
+  const { dateOfRegistration, groundName, phoneNo, imageUrl, addressLine, city, pinCode, state } =
     await req.json();
   try {
     const ground = await prisma.ground.update({
       where: { id: String(id) },
-      data: { dateOfRegistration, groundName, phoneNo, imageUrl, address },
+      data: { dateOfRegistration, groundName, phoneNo, imageUrl, addressLine, city, pinCode, state  },
     });
     return NextResponse.json(ground);
   } catch (error) {

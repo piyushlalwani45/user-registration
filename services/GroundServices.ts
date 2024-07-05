@@ -28,7 +28,7 @@ export async function AddGround() {
           headers: { "Content-Type": "application/json" },
         });
         console.log(response.status);
-        router.push("/userdetails");
+        router.push("/ground");
       } catch (error) {
         console.log(error, "error");
       }
