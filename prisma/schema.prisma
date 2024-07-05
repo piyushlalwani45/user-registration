@@ -24,13 +24,27 @@ model User {
 model Match {
   id        String   @id @default(uuid())
   date      String
-  organiZerName      String
+  organizerName      String
   phoneNo   String
 }
 
 model Ground {
-  id        String   @id @default(uuid())
-  dateOfRegistration      String
-  organiZerName      String
-  phoneNo   String
+  id                  String    @id @default(uuid())
+  dateOfRegistration  DateTime
+  groundName          String
+  phoneNo             String[]
+  imageUrl            String[]
+  addressLine         String
+  pinCode             String
+  city                String
+  state               String
+
+}
+
+model Address {
+  id            String   @id @default(uuid())
+  addressLine   String
+  pinCode       String
+  city          String
+  state         String
 }
